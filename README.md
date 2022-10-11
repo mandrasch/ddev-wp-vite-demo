@@ -11,7 +11,9 @@ client.ts:78 Mixed Content: The page at 'https://ddev-wp-vite-demo.ddev.site/' w
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
-- https://github.com/kucrut/vite-for-wp (modified for DDEV because we need to serve vite from https://DDEV_PROJECT.ddev.site:5173, reverse proxy)
+- https://github.com/kucrut/vite-for-wp
+    - modified for DDEV because we need to serve vite from https://DDEV_PROJECT.ddev.site:5173 via DDEV reverse proxy, but leave server.host setting in vite config as "0.0.0.0". 
+    - See [DDEV example for CraftCMS](https://nystudio107.com/docs/vite/#local-development-environment-setup) as reference implementation
 - https://github.com/torenware/ddev-viteserve
 
 ## Local setup
