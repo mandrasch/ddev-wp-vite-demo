@@ -28,6 +28,14 @@ ddev wp theme activate twentytwentytwo-child
 ddev vite-serve start && ddev launch
 ```
 
+## Build
+
+```bash
+ddev ssh
+cd wp-content/themes/twentytwentytwo-child
+npm run build
+```
+
 ## How was this created?
 
 ```bash
