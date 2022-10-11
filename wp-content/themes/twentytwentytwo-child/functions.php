@@ -1,7 +1,7 @@
 <?php
 
 
-$composer_autoload = dirname(__DIR__) . '/vendor/autoload.php';
+$composer_autoload = dirname(__DIR__) . '/twentytwentytwo-child/vendor/autoload.php';
 if (file_exists($composer_autoload)) {
     require_once $composer_autoload;
 }
@@ -24,12 +24,14 @@ function child_theme_styles()
     if (file_exists(__DIR__ . '/dist/manifest.json')) {
         // ===== PRODUCTION ======
         // https://github.com/idleberg/php-wordpress-vite-assets
-        $baseUrl = get_stylesheet_directory();
-        $manifest = "dist/manifest.json";
-        $entryPoint = "src/js/main.js";
+        $baseUrl = get_stylesheet_directory()."/dist";
+        $manifest = __DIR__."/dist/manifest.json";
+        $entryPoint = "src/js/app.js";
 
         $viteAssets = new WordpressViteAssets($manifest, $baseUrl);
-        $viteAssets->addAction($entryPoint);
+        $viteAssets->addAction($entryPoint); // TODO: use array with css?
+
+        // TODO: do we have to include css on our own?
     } else {
         // ===== DEVELOPMENT ======
         // thx to https://github.com/fgeierst/typo3-vite-demo/blob/master/packages/typo3_vite_demo/Configuration/TypoScript/setup.typoscript#L167
