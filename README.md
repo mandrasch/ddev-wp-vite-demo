@@ -2,16 +2,20 @@
 
 🚧 Work in progress 🚧
 
-Works, but there is still a JS error:
+Works in development, but there is still a JS error:
 
 ```bash
 Uncaught ReferenceError: __SERVER_HOST__ is not defined at client.ts:24:20
 ```
 
+Production broken currently.
+
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
 - https://github.com/torenware/ddev-viteserve
+
+Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
 ## Local setup
 
