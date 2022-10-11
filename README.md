@@ -54,6 +54,7 @@ ddev ssh
 cd wp-content/themes/twentytwentytwo-child
 npm init -y
 npm i --save-dev vite
+npm i --save-dev sass
 
 # https://github.com/kucrut/vite-for-wp
 npm i --save-dev @kucrut/vite-for-wp
