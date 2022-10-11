@@ -14,6 +14,7 @@ Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
 - https://github.com/torenware/ddev-viteserve
+- https://github.com/idleberg/php-wordpress-vite-assets (for production)
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
