@@ -22,7 +22,7 @@ function child_theme_styles()
           //'css-dependencies' => ['wp-components', 'some-registered-style-handle'], // Optional style dependencies. Defaults to empty array.
           //'css-media' => 'all', // Optional.
           //'css-only' => false, // Optional. Set to true to only load style assets in production mode.
-          'in-footer' => true, // Optional. Defaults to false.
+          // 'in-footer' => true, // Optional. Defaults to false.
         ]
       );
 }
