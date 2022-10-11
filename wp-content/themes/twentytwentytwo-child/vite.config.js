@@ -15,7 +15,7 @@ export default {
         manifest: true,
         rollupOptions: {
             // overwrite default .html entry
-            input: 'app.js',
+            input: 'src/js/app.js',
         },
         outDir: 'dist',
     }

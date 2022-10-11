@@ -2,18 +2,15 @@
 
 🚧 Work in progress 🚧
 
-Currently broken:
+Works, but there is still a JS error:
 
-```
-client.ts:78 Mixed Content: The page at 'https://ddev-wp-vite-demo.ddev.site/' was loaded over HTTPS, but attempted to connect to the insecure WebSocket endpoint 'ws://0.0.0.0:5173/'. This request has been blocked; this endpoint must be available over WSS.
+```bash
+Uncaught ReferenceError: __SERVER_HOST__ is not defined at client.ts:24:20
 ```
 
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
-- https://github.com/kucrut/vite-for-wp
-    - modified for DDEV because we need to serve vite from https://DDEV_PROJECT.ddev.site:5173 via DDEV reverse proxy, but leave server.host setting in vite config as "0.0.0.0". 
-    - See [DDEV example for CraftCMS](https://nystudio107.com/docs/vite/#local-development-environment-setup) as reference implementation
 - https://github.com/torenware/ddev-viteserve
 
 ## Local setup
@@ -26,6 +23,11 @@ ddev wp core download
 ddev launch
 
 ddev wp theme activate twentytwentytwo-child
+
+ddev ssh
+cd wp-content/themes/twentytwentytwo-child
+composer install
+exit
 
 ddev vite-serve start && ddev launch
 ```
@@ -55,9 +57,9 @@ cd wp-content/themes/twentytwentytwo-child
 npm init -y
 npm i --save-dev vite
 npm i --save-dev sass
+composer require idleberg/wordpress-vite-assets
+exit
 
-# https://github.com/kucrut/vite-for-wp
-npm i --save-dev @kucrut/vite-for-wp
 # (create vite.config.js, add to scripts in package.json, ...)
 # (add script to functions.php)
 

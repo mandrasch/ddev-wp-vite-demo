@@ -1,9 +1,14 @@
 <?php
 
 
-require_once 'WordpressViteAssets.php';
+$composer_autoload = dirname(__DIR__) . '/vendor/autoload.php';
+if (file_exists($composer_autoload)) {
+    require_once $composer_autoload;
+}
 
 use Idleberg\WordpressViteAssets\WordpressViteAssets;
+
+
 
 /**
  * Child theme stylesheet einbinden in Abhängigkeit vom Original-Stylesheet
@@ -29,9 +34,9 @@ function child_theme_styles()
         // ===== DEVELOPMENT ======
         // thx to https://github.com/fgeierst/typo3-vite-demo/blob/master/packages/typo3_vite_demo/Configuration/TypoScript/setup.typoscript#L167
 
-        wp_enqueue_script('vite-dev-client', site_url().":5173/@vite/client", array(), '1.0.0', false);
+        wp_enqueue_script('vite-dev-client', site_url() . ":5173/@vite/client", array(), '1.0.0', false);
 
-        wp_enqueue_script('vite-dev-app-js', site_url().":5173/src/js/app.js", array(), '1.0.0', false);
+        wp_enqueue_script('vite-dev-app-js', site_url() . ":5173/src/js/app.js", array(), '1.0.0', false);
     }
 
 
@@ -52,7 +57,7 @@ add_action('wp_enqueue_scripts', 'child_theme_styles');
 
 // important: add type=module to vite client
 // https://stackoverflow.com/a/59594789/809939
-add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
+add_filter('script_loader_tag', 'add_type_attribute', 10, 3);
 function add_type_attribute($tag, $handle, $src)
 {
     // if not your script, do nothing and return original $tag

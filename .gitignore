@@ -27,7 +27,7 @@
 /wp-content/themes/twentytwentytwo-child/node_modules
 /wp-content/themes/twentytwentytwo-child/vendor
 # vite output:
-/wp-content/themes/twentytwentytwo-child/js/dist
+/wp-content/themes/twentytwentytwo-child/dist
 
 # For more info about this gitignore-pattern, see e.g.:
 # https://stackoverflow.com/a/29012085/809939)
