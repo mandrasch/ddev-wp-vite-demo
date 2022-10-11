@@ -11,14 +11,14 @@ client.ts:78 Mixed Content: The page at 'https://ddev-wp-vite-demo.ddev.site/' w
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
-- https://github.com/kucrut/vite-for-wp (modified for DDEV)
+- https://github.com/kucrut/vite-for-wp (modified for DDEV because we need to serve vite from https://DDEV_PROJECT.ddev.site:5173, reverse proxy)
 - https://github.com/torenware/ddev-viteserve
 
 ## Local setup
 
 Clone it, then
 
-```
+```bash
 ddev wp core download
 # finish install in browser:
 ddev launch
