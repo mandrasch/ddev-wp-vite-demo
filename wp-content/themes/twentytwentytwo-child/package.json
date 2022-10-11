@@ -1,0 +1,19 @@
+{
+  "name": "twentytwentytwo-child",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@kucrut/vite-for-wp": "^0.3.1",
+    "vite": "^3.1.7"
+  }
+}

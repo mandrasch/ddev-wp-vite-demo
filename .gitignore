@@ -1,0 +1,33 @@
+# Ignore all ...
+/*
+
+# ... but track specific files / folders:
+
+# General files
+!.gitignore
+!/README.md
+!/LICENSE
+
+# DDEV config and provider script
+!/.ddev
+/.ddev/*
+!/.ddev/config.yaml
+!/.ddev/providers
+/.ddev/providers/*
+!/.ddev/providers/ssh.yaml
+!/.ddev/.env
+!/.ddev/docker-compose.viteserve.yaml
+
+# Child theme:
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/twentytwentytwo-child
+/wp-content/themes/twentytwentytwo-child/node_modules
+/wp-content/themes/twentytwentytwo-child/vendor
+# vite output:
+/wp-content/themes/twentytwentytwo-child/js/dist
+
+# For more info about this gitignore-pattern, see e.g.:
+# https://stackoverflow.com/a/29012085/809939)
