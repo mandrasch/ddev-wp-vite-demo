@@ -40,22 +40,8 @@ function child_theme_styles()
         wp_enqueue_script('vite-dev-client', site_url() . ":5173/@vite/client", array(), '1.0.0', false);
         wp_enqueue_script('vite-dev-app-js', site_url() . ":5173/src/js/app.js", array(), '1.0.0', false);
     }
-
-    /* Vite\enqueue_asset(
-        __DIR__ . '/js/dist',
-        'js/src/app.js',
-        [
-          'handle' => 'my-script-handle',
-          //'dependencies' => ['wp-components', 'some-registered-script-handle'], // Optional script dependencies. Defaults to empty array.
-          //'css-dependencies' => ['wp-components', 'some-registered-style-handle'], // Optional style dependencies. Defaults to empty array.
-          //'css-media' => 'all', // Optional.
-          //'css-only' => false, // Optional. Set to true to only load style assets in production mode.
-          // 'in-footer' => true, // Optional. Defaults to false.
-        ]
-      );*/
 }
 add_action('wp_enqueue_scripts', 'child_theme_styles');
-
 
 // important: add type=module to vite client
 // https://stackoverflow.com/a/59594789/809939
