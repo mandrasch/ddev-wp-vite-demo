@@ -2,19 +2,17 @@
 
 🚧 Work in progress 🚧
 
-Works in development, but there is still a JS error:
+Works, but there is still a JS error (hints and advice welcome! :-)):
 
 ```bash
 Uncaught ReferenceError: __SERVER_HOST__ is not defined at client.ts:24:20
 ```
 
-Production broken currently.
-
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
 - https://github.com/torenware/ddev-viteserve
-- https://github.com/idleberg/php-wordpress-vite-assets (for production)
+- https://github.com/idleberg/php-wordpress-vite-assets
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
