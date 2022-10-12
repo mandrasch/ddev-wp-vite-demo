@@ -15,8 +15,13 @@
 !/.ddev/providers
 /.ddev/providers/*
 !/.ddev/providers/ssh.yaml
+# ddev vite-serve files
 !/.ddev/.env
 !/.ddev/docker-compose.viteserve.yaml
+!/.ddev/viteserve
+!/.ddev/web-build
+/.ddev/web-build/*
+!/.ddev/web-build/Dockerfile.ddev-viteserve 
 !/.ddev/commands/web/vite-serve
 
 # Child theme:
