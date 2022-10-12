@@ -57,7 +57,8 @@ ddev launch
 
 ddev wp theme activate twentytwentytwo-child
 
-# install vite
+# Install vite + idleberg/wordpress-vite-assets
+# jump into DDEV container via ddev ssh:
 ddev ssh
 cd wp-content/themes/twentytwentytwo-child
 npm init -y
