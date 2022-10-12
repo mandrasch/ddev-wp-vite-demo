@@ -17,6 +17,7 @@
 !/.ddev/providers/ssh.yaml
 !/.ddev/.env
 !/.ddev/docker-compose.viteserve.yaml
+!/.ddev/commands/web/vite-serve
 
 # Child theme:
 !/wp-content

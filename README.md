@@ -23,6 +23,7 @@ Inspired by https://github.com/fgeierst/typo3-vite-demo.
 Clone it, then
 
 ```bash
+ddev start
 ddev wp core download
 # finish install in browser:
 ddev launch
@@ -36,6 +37,8 @@ exit
 
 ddev vite-serve start && ddev launch
 ```
+
+Use `define('WP_ENV','production');` or `define('WP_ENV','development');` in wp-config.php to either include compiled assets or the vite dev server client script. 
 
 ## Build
 

@@ -8,39 +8,38 @@ if (file_exists($composer_autoload)) {
 
 use Idleberg\WordpressViteAssets\WordpressViteAssets;
 
+// TODO: bundle this somehow in function?
+
+// ===== PRODUCTION ======
+// https://github.com/idleberg/php-wordpress-vite-assets
+
+// TODO: What is the best way to set an environment var in standard WP?
+// Set define('WP_ENV', 'development') or define('WP_ENV', 'production') in wp-config.php
+if (!defined('WP_ENV') || WP_ENV === 'production') {
+
+    // ===== PRODUCTION ======
+    // https://github.com/idleberg/php-wordpress-vite-assets
+    $baseUrl = get_stylesheet_directory_uri() . "/dist/";
+    $manifest = __DIR__ . "/dist/manifest.json";
+    $entryPoint = "src/js/app.js";
+
+    $viteAssets = new WordpressViteAssets($manifest, $baseUrl);
+    $viteAssets->addAction($entryPoint); // TODO: use array with css?
+}
 
 
-/**
- * Child theme stylesheet einbinden in Abhängigkeit vom Original-Stylesheet
- */
 function child_theme_styles()
 {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 
-    // Check if dev or production mode
-    // TODO: what is the best way to figure this out?
-
-
-    if (file_exists(__DIR__ . '/dist/manifest.json')) {
-        // ===== PRODUCTION ======
-        // https://github.com/idleberg/php-wordpress-vite-assets
-        $baseUrl = get_stylesheet_directory()."/dist";
-        $manifest = __DIR__."/dist/manifest.json";
-        $entryPoint = "src/js/app.js";
-
-        $viteAssets = new WordpressViteAssets($manifest, $baseUrl);
-        $viteAssets->addAction($entryPoint); // TODO: use array with css?
-
-        // TODO: do we have to include css on our own?
-    } else {
+    // Include dev client server script (if no manifest.json is found)
+    if (defined('WP_ENV') && WP_ENV === 'development') {
         // ===== DEVELOPMENT ======
         // thx to https://github.com/fgeierst/typo3-vite-demo/blob/master/packages/typo3_vite_demo/Configuration/TypoScript/setup.typoscript#L167
 
         wp_enqueue_script('vite-dev-client', site_url() . ":5173/@vite/client", array(), '1.0.0', false);
-
         wp_enqueue_script('vite-dev-app-js', site_url() . ":5173/src/js/app.js", array(), '1.0.0', false);
     }
-
 
     /* Vite\enqueue_asset(
         __DIR__ . '/js/dist',
@@ -56,6 +55,7 @@ function child_theme_styles()
       );*/
 }
 add_action('wp_enqueue_scripts', 'child_theme_styles');
+
 
 // important: add type=module to vite client
 // https://stackoverflow.com/a/59594789/809939
