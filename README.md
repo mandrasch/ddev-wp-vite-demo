@@ -16,8 +16,6 @@ Tools / Libraries used:
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
-See https://my-ddev-lab.mandrasch.eu/ for more tutorials and infos.
-
 ## Local setup
 
 Clone it, then
@@ -37,6 +35,8 @@ exit
 
 ddev vite-serve start && ddev launch
 ```
+
+Current quick & dirty way to distinguish between local dev and production:
 
 Use `define('WP_ENV','production');` or `define('WP_ENV','development');` in wp-config.php to either include compiled assets or the vite dev server client script. 
 
@@ -88,3 +88,7 @@ ddev ssh
 cd wp-content/themes/twentytwentytwo-child
 npm run dev
 ```
+
+## More resources
+
+See https://my-ddev-lab.mandrasch.eu/ for more tutorials and infos.
