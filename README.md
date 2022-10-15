@@ -16,6 +16,8 @@ Tools / Libraries used:
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
+See https://my-ddev-lab.mandrasch.eu/ for more tutorials and infos.
+
 ## Local setup
 
 Clone it, then
