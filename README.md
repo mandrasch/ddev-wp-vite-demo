@@ -1,3 +1,12 @@
+
+
+📣 **See new project as well:
+https://github.com/mandrasch/ddev-wp-acf-blocks-svelte 📣** 
+
+
+<hr>
+
+
 # DDEV + WordPress + Vite?
 
 🚧 Work in progress 🚧
