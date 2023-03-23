@@ -11,12 +11,6 @@ https://github.com/mandrasch/ddev-wp-acf-blocks-svelte 📣**
 
 🚧 Work in progress 🚧
 
-Works, but there is still a JS error (hints and advice welcome! :-)):
-
-```bash
-Uncaught ReferenceError: __SERVER_HOST__ is not defined at client.ts:24:20
-```
-
 Tools / Libraries used:
 
 - https://ddev.readthedocs.io/en/stable/
@@ -24,6 +18,8 @@ Tools / Libraries used:
 - https://github.com/idleberg/php-wordpress-vite-assets
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
+
+This could be more effective when [roots/bedrock](https://roots.io/bedrock/) is used. 
 
 ## Local setup
 
@@ -37,12 +33,24 @@ ddev launch
 
 ddev wp theme activate twentytwentytwo-child
 
+# Jump into DDEV container and run composer there
+# TODO: Can I trigger this from outside via 'ddev composer ...'?
+# (Or should I just use roots/bedrock? ;-))
 ddev ssh
 cd wp-content/themes/twentytwentytwo-child
 composer install
 exit
 
 ddev vite-serve start && ddev launch
+
+# Stop vite-server
+ddev vite-serve stop
+
+# If you want to start this the classic way,
+# jump into DDEV container and do the following:
+ddev ssh
+cd wp-content/themes/twentytwentytwo-child
+npm run dev
 ```
 
 Current quick & dirty way to distinguish between local dev and production:
@@ -97,6 +105,10 @@ ddev ssh
 cd wp-content/themes/twentytwentytwo-child
 npm run dev
 ```
+
+## Contributors 🤝
+
+- [Furo42](https://github.com/Furo42) - https://github.com/mandrasch/ddev-wp-vite-demo/pull/2
 
 ## More resources
 
