@@ -65,6 +65,11 @@ cd wp-content/themes/twentytwentytwo-child
 npm run build
 ```
 
+## TODOs
+
+- [ ] Use `if (strpos(get_site_url(), ".ddev.site") !== false))` for detection of dev environment?
+- [ ] Convert to [roots/bedrock](https://roots.io/bedrock/)
+
 ## How was this created?
 
 ```bash
