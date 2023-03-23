@@ -19,7 +19,7 @@ Tools / Libraries used:
 
 Inspired by https://github.com/fgeierst/typo3-vite-demo. 
 
-This could be more effective when [roots/bedrock](https://roots.io/bedrock/) is used. 
+This could be more effective when [roots/bedrock](https://roots.io/bedrock/) is used I guess.
 
 ## Local setup
 
