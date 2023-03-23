@@ -37,7 +37,7 @@ function child_theme_styles()
         // ===== DEVELOPMENT ======
         // thx to https://github.com/fgeierst/typo3-vite-demo/blob/master/packages/typo3_vite_demo/Configuration/TypoScript/setup.typoscript#L167
 
-        wp_enqueue_script('vite-dev-client', site_url() . ":5173/@vite/client", array(), '1.0.0', false);
+        wp_enqueue_script('vite-dev-client', site_url() . ":5173/@vite/client", array(), null, false);
         wp_enqueue_script('vite-dev-app-js', site_url() . ":5173/src/js/app.js", array(), '1.0.0', false);
     }
 }
