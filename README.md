@@ -112,4 +112,6 @@ npm run dev
 
 ## More resources
 
+- Another WP + vite lib: https://github.com/kucrut/vite-for-wp 
+
 See https://my-ddev-lab.mandrasch.eu/ for more tutorials and infos.
