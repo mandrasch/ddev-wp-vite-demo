@@ -67,8 +67,8 @@ npm run build
 
 ## TODOs
 
-- [ ] Use `if (strpos(get_site_url(), ".ddev.site") !== false))` for detection of dev environment?
-- [ ] Convert to [roots/bedrock](https://roots.io/bedrock/)
+- [ ] Use `IS_DDEV_PROJECT` for simple detection of dev environment (thx to @furo42)
+- [ ] Convert to [roots/bedrock](https://roots.io/bedrock/) or https://github.com/wecodemore/wpstarter
 
 ## How was this created?
 
