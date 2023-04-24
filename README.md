@@ -69,6 +69,7 @@ npm run build
 
 - [ ] Use `IS_DDEV_PROJECT` for simple detection of dev environment (thx to @furo42)
 - [ ] Convert to [roots/bedrock](https://roots.io/bedrock/) or https://github.com/wecodemore/wpstarter
+- [ ] Use this new method https://ddev.readthedocs.io/en/latest/users/extend/customization-extendibility/#exposing-extra-ports-via-ddev-router rather than docker.compose file
 
 ## How was this created?
 
